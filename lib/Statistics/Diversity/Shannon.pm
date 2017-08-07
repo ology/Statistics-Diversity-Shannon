@@ -28,8 +28,6 @@ Statistics::Diversity::Shannon - Compute the Shannon diversity
 
 A C<Statistics::Diversity::Shannon> computes the Shannon diversity index and evenness metrics.
 
-=head1 ATTRIBUTES
-
 =cut
 
 has data => (
@@ -76,6 +74,16 @@ has evenness => (
   $d = Statistics::Diversity::Shannon->new( freq => \@prop_data );
 
 Create a new C<Statistics::Diversity::Shannon> object from either raw numerical data or proportional frequency data.
+
+=head2 Attributes
+
+=head3 data
+
+A reference to a numeric array
+
+=head3 freq
+
+A reference to a numeric array of proportional frequencies
 
 =cut
 
