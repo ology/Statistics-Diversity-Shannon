@@ -25,7 +25,7 @@ is_deeply $obj->freq, [qw( 0.6 0.1 0.25 0.01 0.04 )], 'freq';
 is sprintf( '%.2f', $obj->index ), 1.06, 'index';
 is sprintf( '%.2f', $obj->evenness ), 0.66, 'evenness';
 
-# Zooarchaeology pg. 106
+# Zooarchaeology pg. 106 https://books.google.com/books?id=aCRaCrdENQ8C
 lives_ok {
     $obj = Statistics::Diversity::Shannon->new( freq => [qw( .25 .25 .25 .25 )] )
 } 'Zooarchaeology created with valid data';
