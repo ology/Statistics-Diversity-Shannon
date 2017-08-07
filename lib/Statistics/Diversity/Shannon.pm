@@ -143,4 +143,6 @@ __END__
 
 The method test in this distribution.
 
+L<https://en.wikipedia.org/wiki/Diversity_index#Shannon_index>
+
 =cut
