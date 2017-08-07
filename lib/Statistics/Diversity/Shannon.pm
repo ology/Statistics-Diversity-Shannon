@@ -17,12 +17,12 @@ Statistics::Diversity::Shannon - Compute the Shannon diversity
 =head1 SYNOPSIS
 
   use Statistics::Diversity::Shannon;
-  @raw_data  = qw( 60 10 25 1 4 );
-  @prop_data = qw( .6 .1 .25 .01 .04 );
-  $d = Statistics::Diversity::Shannon->new( data => \@raw_data );
+  my @raw_data  = qw( 60 10 25 1 4 );
+  my @prop_data = qw( .6 .1 .25 .01 .04 );
+  my $d = Statistics::Diversity::Shannon->new( data => \@raw_data );
   $d = Statistics::Diversity::Shannon->new( freq => \@prop_data );
-  $H = $d->index();
-  $E = $d->evenness();
+  my $H = $d->index();
+  my $E = $d->evenness();
 
 =head1 DESCRIPTION
 
