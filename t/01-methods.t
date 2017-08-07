@@ -15,6 +15,16 @@ dies_ok {
     $obj = Statistics::Diversity::Shannon->new( data => 'foo' )
 } 'dies with invalid data';
 
+# https://www.easycalculation.com/statistics/learn-shannon-wiener-diversity.php
+lives_ok {
+    $obj = Statistics::Diversity::Shannon->new( data => [qw( 60 10 25 1 4 )] )
+} 'easycalculation created with valid data';
+is $obj->N, 5, 'N';
+is $obj->sum, 100, 'sum';
+is_deeply $obj->freq, [qw( 0.6 0.1 0.25 0.01 0.04 )], 'freq';
+is sprintf( '%.2f', $obj->index ), 1.06, 'index';
+is sprintf( '%.2f', $obj->evenness ), 0.66, 'evenness';
+
 # Zooarchaeology pg. 106
 lives_ok {
     $obj = Statistics::Diversity::Shannon->new( freq => [qw( .25 .25 .25 .25 )] )
@@ -31,15 +41,5 @@ is $obj->N, 4, 'N';
 is $obj->sum, 1, 'sum';
 is sprintf( '%.2f', $obj->index ), 0.25, 'index';
 is sprintf( '%.2f', $obj->evenness ), 0.18, 'evenness';
-
-# https://www.easycalculation.com/statistics/learn-shannon-wiener-diversity.php
-lives_ok {
-    $obj = Statistics::Diversity::Shannon->new( data => [qw( 60 10 25 1 4 )] )
-} 'easycalculation created with valid data';
-is $obj->N, 5, 'N';
-is $obj->sum, 100, 'sum';
-is_deeply $obj->freq, [qw( 0.6 0.1 0.25 0.01 0.04 )], 'freq';
-is sprintf( '%.2f', $obj->index ), 1.06, 'index';
-is sprintf( '%.2f', $obj->evenness ), 0.66, 'evenness';
 
 done_testing();
