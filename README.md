@@ -1,2 +1,2 @@
-# Statistics-Diversity-Shannon
-Compute the Shannon diversity
+# Statistics::Diversity::Shannon
+Compute the Shannon diversity index and evenness
