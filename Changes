@@ -1,4 +1,9 @@
 Revision history for Statistics-Diversity-Shannon
 
 {{$NEXT}}
+
+0.0101 2017-08-10 18:12:01
+    - Specify the List::Util version.
+
+0.01 2017-08-07 15:27:42
     - Minted by Dist::Zilla.

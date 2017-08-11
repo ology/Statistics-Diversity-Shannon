@@ -6,9 +6,9 @@ use Moo;
 use strictures 2;
 use namespace::clean;
 
-use List::Util qw(sum0);
+use List::Util 1.30 qw(sum0);
 
-our $VERSION = '0.01';
+our $VERSION = '0.0101';
 
 =head1 NAME
 
