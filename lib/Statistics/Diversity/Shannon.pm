@@ -13,10 +13,11 @@ our $VERSION = '0.0102';
 =head1 SYNOPSIS
 
   use Statistics::Diversity::Shannon;
-  my @data  = qw( 60 10 25 1 4 );
-  my $d = Statistics::Diversity::Shannon->new( data => \@raw_data );
+  my @data = qw( 60 10 25 1 4 );
+  my $d = Statistics::Diversity::Shannon->new( data => \@data );
+  # OR
   @data = qw( .6 .1 .25 .01 .04 );
-  $d = Statistics::Diversity::Shannon->new( freq => \@prop_data );
+  $d = Statistics::Diversity::Shannon->new( freq => \@data );
   my $H = $d->index();
   my $E = $d->evenness();
 
