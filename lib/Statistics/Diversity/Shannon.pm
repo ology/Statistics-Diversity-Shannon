@@ -2,11 +2,12 @@ package Statistics::Diversity::Shannon;
 
 # ABSTRACT: Compute the Shannon diversity
 
-use Moo;
 use strictures 2;
-use namespace::clean;
 
 use List::Util 1.30 qw(sum0);
+use Moo;
+
+use namespace::clean;
 
 our $VERSION = '0.0102';
 
